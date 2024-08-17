@@ -12,7 +12,7 @@ import keras
 keras.utils.set_random_seed(812)
 
 # Load the dataset
-data = pd.read_csv("/content/US CPI.csv")
+data = pd.read_csv("/users/vaibhavmohankumar/downloads/US CPI.csv")
 
 #Removes any null values in the dataset
 data.isnull().sum()
