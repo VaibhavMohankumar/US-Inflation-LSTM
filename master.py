@@ -4,8 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-from keras.models import Sequential
-from keras.layers import LSTM, Dense
+from keras.models import Sequential # type: ignore
+from keras.layers import LSTM, Dense # type: ignore
 import plotly.express as px
 import keras
 
