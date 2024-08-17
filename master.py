@@ -14,6 +14,7 @@ keras.utils.set_random_seed(812)
 # Load the dataset
 data = pd.read_csv("/content/US CPI.csv")
 
+#Removes any null values in the dataset
 data.isnull().sum()
 
 # Convert the 'date' column to datetime format
