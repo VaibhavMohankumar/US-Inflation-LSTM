@@ -60,6 +60,7 @@ model.compile(optimizer='adam', loss='mse')
 history = model.fit(X_train, y_train, epochs=50, batch_size=32,validation_data=(X_test,y_test))
 
 
+# Create an interactive plot for training and validation loss
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('Train and validation loss')
@@ -68,7 +69,6 @@ plt.xlabel('epoch')
 plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 
-###########################################################################
 
 # Predictions
 train_predict = model.predict(X_train)
