@@ -60,16 +60,6 @@ model.compile(optimizer='adam', loss='mse')
 history = model.fit(X_train, y_train, epochs=50, batch_size=32,validation_data=(X_test,y_test))
 
 
-# Create an interactive plot for training and validation loss
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('Train and validation loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train', 'val'], loc='upper left')
-plt.show()
-
-
 # Predictions
 train_predict = model.predict(X_train)
 test_predict = model.predict(X_test)
@@ -92,3 +82,13 @@ print(plot_data)
 fig = px.line(plot_data, x='Year', y=['Predicted CPI', 'Actual CPI'], title=' US CPI Forecasting with Long Short-Term Memory Model (LSTM)')
 fig.update_layout(xaxis_title='Year', yaxis_title=' US CPI', legend_title='Data')
 fig.show()
+
+
+# Create an interactive plot for training and validation loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Train and validation loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
