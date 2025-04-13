@@ -4,15 +4,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
+import tensorflow
 from tensorflow import keras
-from keras.models import Sequential # type: ignore
-from keras.layers import LSTM, Dense # type: ignore
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import LSTM, Dense # type: ignore
 import plotly.express as px
 
 keras.utils.set_random_seed(812)
 
 # Load the dataset
-data = pd.read_csv("/users/vaibhavmohankumar/downloads/US CPI.csv")
+data = pd.read_csv("/users/vaibhavmohankumar/desktop/US-Inflation-LSTM/US CPI.csv")
 
 #Removes any null values in the dataset
 data.isnull().sum()
